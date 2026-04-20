@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Explore Pets - NeoPaws</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body class="explore-body">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-nav">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">🐾 NeoPaws</a>
+        <div class="ms-auto">
+            <a href="index.html" class="btn btn-glow">
+                HOME
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<section class="explore-hero text-center text-white d-flex align-items-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold glow-text">Explore Our Universe of Pets</h1>
+        <p class="lead">Discover companions powered by love & technology.</p>
+    </div>
+</section>
+
+<!-- FILTER BUTTONS -->
+<section class="py-4 text-center">
+    <div class="container">
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterPets('all')">All</button>
+            <button class="filter-btn" onclick="filterPets('dog')">Dogs</button>
+            <button class="filter-btn" onclick="filterPets('cat')">Cats</button>
+            <button class="filter-btn" onclick="filterPets('rabbit')">Rabbit</button>
+            <button class="filter-btn" onclick="filterPets('hamster')">Hamster</button>
+            <button class="filter-btn" onclick="filterPets('exotic')">Exotic</button>
+        </div>
+    </div>
+</section>
+
+<!-- PET GRID -->
+<section class="pb-5">
+<div class="container">
+<div class="row g-4" id="petGrid">
+
+    <!-- DOG -->
+    <div class="col-md-4 pet-item dog">
+        <div class="glass-card">
+            <img src="gold.jpg" class="img-fluid">
+            <div class="card-body">
+                <h5>Spike</h5>
+                <p>Loyal • Friendly • 2 Years</p>
+                <a href="contact.html">
+                     <button class="btn btn-glow w-100">Adopt Now!</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAT -->
+    <div class="col-md-4 pet-item cat">
+        <div class="glass-card">
+            <img src="cat1.jpg" class="img-fluid">
+            <div class="card-body">
+                <h5>Luna</h5>
+                <p>Calm • Affectionate • 1 Year</p>
+                <a href="contact.html">
+                     <button class="btn btn-glow w-100">Adopt Now!</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- RABBIT -->
+    <div class="col-md-4 pet-item rabbit">
+        <div class="glass-card">
+            <img src="rabbit.jpg" class="img-fluid">
+            <div class="card-body">
+                <h5>White Rabbit</h5>
+                <p>Gentle • Playful • 6 Months</p>
+                <a href="contact.html">
+                     <button class="btn btn-glow w-100">Adopt Now!</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HAMSTER -->
+    <div class="col-md-4 pet-item hamster">
+        <div class="glass-card">
+            <img src="ham.jpg" class="img-fluid">
+            <div class="card-body">
+                <h5>Hamster</h5>
+                <p>Small • Cute • 3 Months</p>
+                <a href="contact.html">
+                     <button class="btn btn-glow w-100">Adopt Now!</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXOTIC -->
+    <div class="col-md-4 pet-item exotic">
+        <div class="glass-card">
+            <img src="sug.jpg" class="img-fluid">
+            <div class="card-body">
+                <h5>Sugar Glider</h5>
+                <p>Adorable • Social • 1 Year</p>
+                <a href="contact.html">
+                     <button class="btn btn-glow w-100">Adopt Now!</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</section>
+
+<!-- SCRIPT -->
+<script>
+function filterPets(category) {
+    let items = document.querySelectorAll('.pet-item');
+    let buttons = document.querySelectorAll('.filter-btn');
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    items.forEach(item => {
+        if(category === 'all') {
+            item.style.display = "block";
+        } else {
+            item.style.display = item.classList.contains(category) ? "block" : "none";
+        }
+    });
+}
+</script>
+
+<script src="utils.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Donate | NeoPaws</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body class="dark-bg">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark fixed-top custom-nav">
+<div class="container">
+<a class="navbar-brand glow-text fw-bold" href="index.html">🐾 NeoPaws</a>
+
+<div class="ms-auto d-flex gap-3">
+<a href="support.html" class="btn btn-outline-light">BACK</a>
+<a href="index.html" class="btn btn-glow">HOME</a>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section text-center text-light">
+<div class="container">
+<h1 class="display-4 fw-bold neon-heading">Make a Donation</h1>
+<p class="lead mt-3">
+Your generosity powers rescue, recovery, and rehoming.
+</p>
+</div>
+</section>
+
+<!-- DONATION FORM -->
+<section class="container py-5 text-light">
+<div class="glass-card p-5">
+
+<form id="donateForm">
+
+<!-- Donation Amount -->
+<h4 class="fw-bold neon-subheading mb-4">Select Donation Amount</h4>
+
+<div class="row g-3 mb-4">
+<div class="col-md-3">
+<input type="radio" class="btn-check" name="amount" id="amount25" value="25">
+<label class="btn btn-outline-info w-100" for="amount25">$25</label>
+</div>
+
+<div class="col-md-3">
+<input type="radio" class="btn-check" name="amount" id="amount50" value="50">
+<label class="btn btn-outline-info w-100" for="amount50">$50</label>
+</div>
+
+<div class="col-md-3">
+<input type="radio" class="btn-check" name="amount" id="amount100" value="100">
+<label class="btn btn-outline-info w-100" for="amount100">$100</label>
+</div>
+
+<div class="col-md-3">
+<input type="number" id="customAmount" class="form-control futuristic-input" placeholder="Custom Amount">
+</div>
+</div>
+
+<!-- Personal Info -->
+<h4 class="fw-bold neon-subheading mt-4 mb-3">Donor Information</h4>
+
+<div class="row g-3">
+
+<div class="col-md-6">
+<input type="text" id="fname" class="form-control futuristic-input" placeholder="First Name">
+</div>
+
+<div class="col-md-6">
+<input type="text" id="lname" class="form-control futuristic-input" placeholder="Last Name">
+</div>
+
+<div class="col-md-6">
+<input type="email" id="email" class="form-control futuristic-input" placeholder="Email Address">
+</div>
+
+<div class="col-md-6">
+<input type="tel" id="phone" class="form-control futuristic-input" placeholder="Phone Number">
+</div>
+
+<div class="col-12">
+<input type="text" id="address" class="form-control futuristic-input" placeholder="Street Address">
+</div>
+
+<div class="col-md-6">
+<input type="text" id="city" class="form-control futuristic-input" placeholder="City">
+</div>
+
+<div class="col-md-3">
+<input type="text" id="state" class="form-control futuristic-input" placeholder="State">
+</div>
+
+<div class="col-md-3">
+<input type="text" id="zip" class="form-control futuristic-input" placeholder="Zip Code">
+</div>
+
+</div>
+
+<!-- Payment Section -->
+<h4 class="fw-bold neon-subheading mt-5 mb-3">Payment Details</h4>
+
+<div class="row g-3">
+
+<div class="col-md-12">
+<select id="payment" class="form-select futuristic-input">
+<option value="">Select Payment Method</option>
+<option>Credit Card</option>
+<option>Debit Card</option>
+</select>
+</div>
+
+<div class="col-md-12">
+<input type="text" id="card" class="form-control futuristic-input" placeholder="Card Number">
+</div>
+
+<div class="col-md-6">
+<input type="text" id="expiry" class="form-control futuristic-input" placeholder="Expiry Date (MM/YY)">
+</div>
+
+<div class="col-md-6">
+<input type="text" id="cvv" class="form-control futuristic-input" placeholder="CVV">
+</div>
+
+</div>
+
+<!-- Optional Message -->
+<div class="mt-4">
+<textarea id="message" class="form-control futuristic-input" rows="3" placeholder="Leave a message (Optional)"></textarea>
+</div>
+
+<!-- Terms -->
+<div class="form-check mt-4">
+<input id="terms" class="form-check-input" type="checkbox">
+<label class="form-check-label">
+I agree to the terms & conditions and understand this is a voluntary donation.
+</label>
+</div>
+
+<!-- Submit -->
+<div class="text-center mt-5">
+<button type="submit" class="btn btn-glow btn-lg px-5">
+Complete Donation
+</button>
+</div>
+
+</form>
+
+<script src="utils.js"></script>
+<script src="donate.js"></script>
+
+</div>
+</section>
+
+<footer class="text-center py-4 text-secondary">
+© 2026 NeoPaws | Secure Donation Portal
+</footer>
+
+</body>
+</html>
